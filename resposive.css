@@ -80,8 +80,10 @@
         background-color: #092c3e;
         border-radius: 2rem;
     }
-    .left-icon-header,
     .right-icon-header{
+        display: block;
+    }
+    .left-icon-header{
         display: block;
     }
 
