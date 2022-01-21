@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./assests/Font-awesome/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resposive.css">
+    <title>App Music</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <!-- NAV-BAR -->
+            <div class="nav-bar">
+                <header>
+                    <input  type="checkbox" name="switch-toggle" id="light-dark">
+                    <i class="fas fa-stream left-icon "></i>
+                </header>
+                <div class="nav-logo">
+                    <i class="navbar__logo fa fa-music"></i>
+                    <h2><span>Shaze</span>Sound</h2>
+                </div>
+                <div class="nav-content">
+                    <ul>
+                        <li class="nav-content-links"><a href="#"><i class="fas fa-home"></i>Home</a></li>
+                        <li class="nav-content-links"><a href="#"><i class="fas fa-chart-line"></i>Trends</a></li>
+                        <li class="nav-content-links"><a href="#"><i class="fa fa-fas fa-music"></i>Library</a></li>
+                    </ul>
+                    <ul>
+                        <p class="discover">Discover</p>
+                        <li class="nav-content-links"><a href="#"><i class="fas fa-calendar-alt"></i>Discover Weekly</a></li>
+                        <li class="nav-content-links"><a href="#"><i class="fa fa-podcast"></i>Made For You</a></li>
+                        <li class="nav-content-links"><a href="#"><i class="fa fa-headphones"></i>Daily Mix</a></li>
+                    </ul>
+                    <ul>
+                        <p class="collection">Your Collection</p>
+                        <li class="nav-content-links"><a href="#"><i class="fa fa-heart"></i>Liked Songs</a></li>
+                        <li class="nav-content-links"><a href="#"><i class="fa fa-user"></i>Favorite Artist</a></li>
+                        <li class="nav-content-links"><a href="#"><i class="fa fa-list-alt"></i>Playlist</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- MAIN-CONTENT -->
+            <div class="main-content">
+                <div class="main-content_header">
+                    <div class="main-content_header_nav">
+                        <i class="fa fa-angle-left"></i>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    <i class="fas fa-stream left-icon-header "></i>
+                    <div class="main-content_search-form">
+                        <i class="fas fa-search search-btn"></i>
+                        <input class="search-input" type="text" placeholder="Search for artist, songs.....">
+                    </div>
+                    <i class="fas fa-stream right-icon-header "></i>
+                </div>
+                <div class="main-content_banner">
+                    <img src="./img/banner2.jpg" alt="">
+                </div>
+                <div class="main_my-playlist">
+                    <div class="playlist-header">
+                        <h2>Popular</h2>
+                        <p>See All</p>
+                    </div>
+                    <div class="playlist-list">
+                        <div class="playlist playlist-list__list">
+                            <p class="playlist_number">#</p>
+                            <p class="playlist_title">TITLE</p>
+                            <p class="playlist_playing">PLAYING</p>
+                            <p class="playlist_time">TIME</p>
+                            <p class="playlist_album">ALBUM</p>
+                        </div>
+                        <div class="link-playlist">
+                            
+                        </div>   
+                    </div>
+                    <div class="play-song ">
+                        <div class="play-control">
+                            <div class="play-control__act">
+                                <i class="far fa-heart" id="heart"></i>     
+                                <i class="fas fa-music"></i>
+                                <i class="fas fa-expand-alt"></i>
+                            </div>
+                            <div class="play-control__main">
+                                <i class="fas fa-redo-alt play-repeat"></i>
+                                <i class="fas fa-fast-backward play-backward"></i>
+                                <span class="play-inner">
+                                    <i class="fas fa-play-circle icon-pause"></i>
+                                    <i class="fas fa-pause-circle icon-play"></i>
+                                </span>
+                                <i class="fas fa-fast-forward play-forward "></i>
+                                <i class="fas fa-random shuffle-song"></i>
+                            </div>
+                            <div class="play-control__volume">
+                                <i class="fas fa-volume-down"></i>
+                                <input type="range" class="volume" id="volume" max="1" min="0" step="0.01"  onchange="changeVolume(this.value)" />
+                                <i class="fas fa-volume-up"></i>  
+                            </div>
+                        </div>
+                        <div class="play-seekbar">
+                            <div class="timer__left">0:00</div>
+                            <input type="range" id="range" class="range" value="0" step="1" min="0" max="100">
+                            <audio src="./music/song1.mp3" id="song"></audio>
+                            <div class="timer__right">0:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SLIDER-BAR -->
+            <div class="sidebar">
+                <div class="sidebar-user">
+                    <i class="fas fa-stream right-icon"></i>
+                    <div class="sidebar-avatar">
+                        <img src="/img/name.jpg" alt="">
+                    </div>
+                    <div class="sidebar-user_name">
+                        <h4>Sebastian Vettel</h4>
+                        <p>Premium Member <i class="fa fa-king"></i> </p>
+                    </div>
+                    <div class="sidebar-user-bell">
+                        <i class="fa fa-bell"></i>
+                    </div>
+                </div> 
+                <div class="sidebar_recent-player">
+                    <div class="sidebar-recent-header">
+                        <h2>Recent Played</h2>
+                        <a href="">See all</a>
+                    </div>
+                    <div class="sidebar_recent-items">
+                        <img src="/img/song1.jpg" alt="">
+                        <div class="sidebar_recent-content">
+                            <h4>Biệt tri kỉ (别知己)</h4>
+                            <p class="sidebar_recent-name-signer">ARS Remix</p>
+                        </div>
+                        <p class="sidebar_recent-time">1min ago</p>
+                    </div>
+                    <div class="sidebar_recent-items">
+                        <img src="/img/song2.jpg" alt="">
+                        <div class="sidebar_recent-content">
+                            <h4>Stahl </h4>
+                            <p class="sidebar_recent-name-signer">Dreams</p>
+                        </div>
+                        <p class="sidebar_recent-time">1day ago</p>
+                    </div>
+                    <div class="sidebar_recent-items">
+                        <img src="/img/song3.jpg" alt="">
+                        <div class="sidebar_recent-content">
+                            <h4>A Y Mạc (阿衣莫)</h4>
+                            <p class="sidebar_recent-name-signer">越南鼓版</p>
+                        </div>
+                        <p class="sidebar_recent-time">2min ago</p>
+                    </div>
+                    <div class="sidebar_recent-items">
+                        <img src="/img/song4.jpg" alt="">
+                        <div class="sidebar_recent-content">
+                            <h4>Trap Queen</h4>
+                            <p class="sidebar_recent-name-signer">Adriana Gomez</p>
+                        </div>
+                        <p class="sidebar_recent-time">8min ago</p>
+                    </div>
+                    
+                </div>
+                <div class="sidebar_suggest-album">
+                    <img src="/img/song5.jpg" alt="">
+                    <div class="sidebar_suggest-album-info">
+                        <h2>Biệt tri kỉ (别知己)</h2>
+                        <p>ARS Remix</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script src="main.js"></script>
+</body>
+</html> 
