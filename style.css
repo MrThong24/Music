@@ -176,9 +176,13 @@ html::-webkit-scrollbar-thumb{
     left: 23px;
     color: #757575;
 }
+.left-icon{
+    cursor: pointer;
+}
 .right-icon-header,
 .left-icon-header{
     display: none;
+
 }
 .main-content_banner{
     padding: 0px 30px 0px 30px;
