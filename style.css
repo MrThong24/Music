@@ -328,6 +328,7 @@ html::-webkit-scrollbar-thumb{
 .play-control__main i{
     padding: 0px 10px;
     font-size: 18px;
+    cursor: pointer;
 }
 .play-control__main .play-inner i{
     font-size:36px;
