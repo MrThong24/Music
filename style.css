@@ -313,6 +313,7 @@ html::-webkit-scrollbar-thumb{
 }
 .play-song{
     height:112px;
+    position: relative;
 }
 .play-song .icon-play {
     display: none;
