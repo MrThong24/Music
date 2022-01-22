@@ -82,9 +82,11 @@
     }
     .right-icon-header{
         display: block;
+        cursor: pointer;
     }
     .left-icon-header{
         display: block;
+        cursor: pointer;
     }
 
 }
